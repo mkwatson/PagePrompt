@@ -1,10 +1,10 @@
 # PagePrompt
 
-PagePrompt is a browser bookmarklet tool that extracts text content from webpages, YouTube transcripts, or PDFs and loads it into ChatGPT or Claude as a contextual prompt. It’s a flexible tool designed for any type of content, whether technical, casual, or conversational.
+PagePrompt is a browser bookmarklet tool that extracts text content from webpages, YouTube transcripts, or PDFs and loads it into ChatGPT or Claude as a contextual prompt. It’s designed to handle any type of content, making it easier to start chat sessions with relevant context.
 
 ## Why Fork This Repo?
 
-To ensure that you maintain control over the script, we recommend forking this repository and hosting your own version of PagePrompt. This way, there’s no dependency on the original repository and no risk of unexpected changes. If updates are released, you can always pull them into your fork.
+To ensure full control over the script, we recommend forking this repository and hosting your own version of PagePrompt. By doing so, you avoid dependency on the original repository and eliminate the risk of unexpected changes. If updates are released, you can always pull them into your fork.
 
 ## Features
 - **Content Detection**: Automatically identifies content types such as general webpages, YouTube transcripts, and PDF files (manual selection needed).
@@ -16,27 +16,16 @@ To ensure that you maintain control over the script, we recommend forking this r
 1. **Fork and Host Your Version**:
    - Fork this repository to your own GitHub account.
    - Enable GitHub Pages in your forked repository:
-     - Go to **Settings** > **Pages** > Select the `main` branch and save.
-
-2. **Add Bookmarklet**:
-   - Create a new bookmark in your browser's bookmark manager.
-   - Name it **PagePrompt**.
-   - For the URL, paste the following code:
-
-     ```javascript
-     javascript:(function() {
-         fetch("https://yourusername.github.io/PagePrompt/pageprompt.js")
-         .then(response => response.text())
-         .then(script => eval(script))
-         .catch(error => alert("Failed to load the script: " + error));
-     })();
-     ```
-
-   - Replace `https://yourusername.github.io/PagePrompt/pageprompt.js` with the URL of your hosted `pageprompt.js` file from your GitHub Pages fork.
+     - Go to **Settings** > **Pages** > Set the source to the `main` branch and save.
+   
+2. **Add Bookmarklet via Drag-and-Drop**:
+   - Visit your GitHub Pages site: `https://yourusername.github.io/PagePrompt`.
+   - On this page, you’ll find a button labeled **“Drag this to your Bookmarks Bar”**. 
+   - Simply drag the button to your bookmarks bar, and the bookmarklet will be installed.
 
 3. **Run PagePrompt**:
-   - Visit any webpage, select relevant content, then click the PagePrompt bookmarklet.
-   - PagePrompt will open ChatGPT or Claude and, when pressed again on that page, will paste the selected content.
+   - Visit any webpage, select relevant content, then click the PagePrompt bookmarklet from your bookmarks bar.
+   - PagePrompt will open ChatGPT or Claude, and when pressed again on that page, it will paste the selected content as context.
 
 ## License
 
