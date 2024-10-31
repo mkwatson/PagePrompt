@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Get repository information
         id: repo-info
@@ -26,9 +26,11 @@ jobs:
           sed -i "s|INSERT_GHPAGES_URL_HERE|$GHPAGES_URL|g" README.md
 
       - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "Update README with GitHub Pages URL"
+          git commit -m "Update README with GitHub Pages URL" || echo "No changes to commit"
           git push
