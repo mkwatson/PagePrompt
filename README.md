@@ -1,13 +1,14 @@
 # PagePrompt
 
-PagePrompt is a browser bookmarklet tool that extracts text content from webpages, YouTube transcripts, or PDFs and loads it into ChatGPT or Claude as a contextual prompt. It’s designed to handle any type of content, making it easier to start chat sessions with relevant context.
+PagePrompt is a browser bookmarklet tool that extracts all visible text content from webpages, YouTube transcripts, or PDFs and loads it into ChatGPT or Claude as a contextual prompt. Just visit a page and click the bookmarklet—no need to manually select content.
 
 ## Why Fork This Repo?
 
 To ensure full control over the script, we recommend forking this repository and hosting your own version of PagePrompt. By doing so, you avoid dependency on the original repository and eliminate the risk of unexpected changes. If updates are released, you can always pull them into your fork.
 
 ## Features
-- **Content Detection**: Automatically identifies content types such as general webpages, YouTube transcripts, and PDF files (manual selection needed).
+- **One-Click Extraction**: Automatically captures all visible content on a page or PDF with a single click.
+- **Content Detection**: Identifies content types such as general webpages, YouTube transcripts, and PDF files.
 - **Clipboard Integration**: Copies extracted content to the clipboard for easy pasting into chat windows.
 - **ChatGPT/Claude Ready**: Opens a new ChatGPT or Claude session with the content ready to be pasted as context.
 
@@ -17,15 +18,15 @@ To ensure full control over the script, we recommend forking this repository and
    - Fork this repository to your own GitHub account.
    - Enable GitHub Pages in your forked repository:
      - Go to **Settings** > **Pages** > Set the source to the `main` branch and save.
-   
+
 2. **Add Bookmarklet via Drag-and-Drop**:
    - Visit your GitHub Pages site: `https://yourusername.github.io/PagePrompt`.
    - On this page, you’ll find a button labeled **“Drag this to your Bookmarks Bar”**. 
    - Simply drag the button to your bookmarks bar, and the bookmarklet will be installed.
 
 3. **Run PagePrompt**:
-   - Visit any webpage, select relevant content, then click the PagePrompt bookmarklet from your bookmarks bar.
-   - PagePrompt will open ChatGPT or Claude, and when pressed again on that page, it will paste the selected content as context.
+   - Visit any webpage or PDF you want to extract content from, then click the PagePrompt bookmarklet from your bookmarks bar.
+   - PagePrompt will automatically open ChatGPT or Claude, and when pressed again on that page, it will paste the full page content as context.
 
 ## License
 
@@ -36,4 +37,4 @@ If you have ideas to improve PagePrompt, please submit pull requests to the orig
 
 ---
 
-With PagePrompt, you can streamline gathering context from various content types and start chat sessions with better-prepared prompts in just a few clicks.
+With PagePrompt, you can streamline gathering context from various content types and start chat sessions with full-page context in just a few clicks.
