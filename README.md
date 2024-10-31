@@ -20,8 +20,8 @@ To ensure full control over the script, we recommend forking this repository and
      - Go to **Settings** > **Pages** > Set the source to the `main` branch and save.
 
 2. **Add Bookmarklet via Drag-and-Drop**:
-   - Visit your GitHub Pages site: `https://yourusername.github.io/PagePrompt`.
-   - On this page, you’ll find a button labeled **“Drag this to your Bookmarks Bar”**. 
+   - Visit your GitHub Pages site: [PagePrompt Bookmarklet Install Page](../../pages).
+   - On this page, you’ll find a button labeled **“Drag this to your Bookmarks Bar”**.
    - Simply drag the button to your bookmarks bar, and the bookmarklet will be installed.
 
 3. **Run PagePrompt**:
