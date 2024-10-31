@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PagePrompt Bookmarklet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .bookmarklet {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .instructions {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>PagePrompt Bookmarklet</h1>
+    
+    <!-- Bookmarklet button -->
+    <a class="bookmarklet" id="bookmarklet" href="#">
+        Drag this to your Bookmarks Bar
+    </a>
+    
+    <p class="instructions">Drag the button above to your bookmarks bar to install PagePrompt.</p>
+
+    <script>
+        // Dynamically set the href for the bookmarklet button
+        const repoURL = window.location.origin + window.location.pathname;
+        const scriptURL = `${repoURL}pageprompt.js`;
+        
+        document.getElementById("bookmarklet").href = `javascript:(function(){fetch('${scriptURL}').then(response=>response.text()).then(script=>eval(script)).catch(error=>alert('Failed to load the script: ' + error));})();`;
+    </script>
+</body>
+</html>
